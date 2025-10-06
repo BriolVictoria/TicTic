@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: kAppTheme, //Si on regarde la constante c'est générer et ça permet de définir l'ensemble des variables qui vont être utilisés pour faire l'aspect couleur de notre application
-      home: const Welcome(),
+      home: Welcome(),
     );
   }
 }

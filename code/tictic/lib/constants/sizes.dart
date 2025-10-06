@@ -16,3 +16,6 @@ const kVerticalPaddingXL = kVerticalPaddingL * 2;
 
 const kHorizontalPaddingXXL = kHorizontalPaddingXL * 2;
 const kVerticalPaddingXXL = kVerticalPaddingXL * 2;
+
+const kWidthSlider = 45.0;
+const kHeightSlider = 2.0;
