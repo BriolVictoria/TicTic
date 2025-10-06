@@ -1,27 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:tictic/constants/sizes.dart';
 import 'package:tictic/constants/colors.dart';
+import 'package:tictic/constants/sizes.dart';
 import 'package:tictic/screens/welcome/widgets/logo_welcome.dart';
+import 'package:tictic/screens/welcome/widgets/text_divider.dart';
+import 'package:tictic/screens/welcome/widgets/text_slider_with_bullets.dart';
 
-class Welcome extends StatefulWidget {
+class Welcome extends StatelessWidget {
   const Welcome({super.key});
-
-  @override
-  State<Welcome> createState() => _WelcomeState();
-}
-
-class _WelcomeState extends State<Welcome> {
-  final PageController _pageController = PageController(viewportFraction: 1);
-
-  int _currentPage = 0;
-
-  final _items = [
-    'L’harmonie financière dans vos groupes, en toute simplicité !',
-    'Calculs instantanés, équité garantie avec TicTic !',
-    'Calculs fastidieux ? Non merci. Optez pour la simplicité avec TicTic !',
-    'TicTic : Vos dépenses partagées en toute simplicité !',
-  ];
 
   @override
   Widget build(BuildContext context) {
@@ -37,50 +22,37 @@ class _WelcomeState extends State<Welcome> {
         child: SafeArea(
           child: Column(
             children: [
+              Spacer(),
               LogoWelcome(),
-              SizedBox(
-                // TODO: fix
-                height: kTextSliderHeight,
-                child: PageView.builder(
-                  scrollDirection: Axis.horizontal,
-                  controller: _pageController,
-                  itemCount: _items.length,
-                  onPageChanged: (index) {
-                    setState(() {
-                      _currentPage = index;
-                    });
-                  },
-                  itemBuilder: (context, index) {
-                    return Padding(
-                      padding: const EdgeInsets.symmetric(
-                        horizontal: kHorizontalPadding,
-                      ),
-                      child: Text(_items[index]),
-                    );
-                  },
-                ),
+              Spacer(),
+              TextSliderWithBullets(),
+              Spacer(),
+              ElevatedButton(
+                onPressed: () {},
+                style: ElevatedButton.styleFrom(backgroundColor: kMainColor),
+                child: Text('Continuer sans compte'),
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: _items.asMap().entries.map((entry) {
-                  int index = entry.key;
-                  return Container(
-                    width: kWidthSlider,
-                    height: kHeightSlider,
-                    margin: const EdgeInsets.symmetric(horizontal: 10),
-                    decoration: BoxDecoration(
-                      shape: BoxShape.rectangle,
-                      color: _currentPage == index ? kSecondaryColor : kBackgroundColor,
-                      boxShadow: [
-                        BoxShadow(
-                          color: kMainColor,
-                          blurRadius: 8,
-                          spreadRadius: 1,
-                        ),
-                      ] ,
-                    ),
-                  );
-                }).toList(),
+              SizedBox(height: kVerticalPadding),
+              TextDivider(text: 'Ou'),
+              SizedBox(height: kVerticalPadding),
+              SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: kHorizontalPadding),
+                  child: Row(
+                    children: [
+                      ElevatedButton(
+                        onPressed: () {},
+                        child: Text("Je me connecte"),
+                      ),
+                      SizedBox(width: kHorizontalPadding),
+                      ElevatedButton(
+                        onPressed: () {},
+                        child: Text("Créer mon compte"),
+                      ),
+                    ],
+                  ),
+                ),
               ),
             ],
           ),
