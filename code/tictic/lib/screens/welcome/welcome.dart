@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tictic/constants/colors.dart';
 import 'package:tictic/constants/sizes.dart';
+import 'package:tictic/screens/welcome/widgets/call_to_actions.dart';
 import 'package:tictic/screens/welcome/widgets/logo_welcome.dart';
 import 'package:tictic/screens/welcome/widgets/text_divider.dart';
 import 'package:tictic/screens/welcome/widgets/text_slider_with_bullets.dart';
@@ -27,33 +28,7 @@ class Welcome extends StatelessWidget {
               Spacer(),
               TextSliderWithBullets(),
               Spacer(),
-              ElevatedButton(
-                onPressed: () {},
-                style: ElevatedButton.styleFrom(backgroundColor: kMainColor),
-                child: Text('Continuer sans compte'),
-              ),
-              SizedBox(height: kVerticalPadding),
-              TextDivider(text: 'Ou'),
-              SizedBox(height: kVerticalPadding),
-              SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: kHorizontalPadding),
-                  child: Row(
-                    children: [
-                      ElevatedButton(
-                        onPressed: () {},
-                        child: Text("Je me connecte"),
-                      ),
-                      SizedBox(width: kHorizontalPadding),
-                      ElevatedButton(
-                        onPressed: () {},
-                        child: Text("Créer mon compte"),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
+              CallToActions(),
             ],
           ),
         ),
