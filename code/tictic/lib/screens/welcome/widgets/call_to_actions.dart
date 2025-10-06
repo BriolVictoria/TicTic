@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tictic/screens/register/register.dart';
 import 'package:tictic/screens/welcome/widgets/text_divider.dart';
 
 import '../../../constants/colors.dart';
@@ -28,7 +29,9 @@ class CallToActions extends StatelessWidget {
                 ElevatedButton(onPressed: () {}, child: Text("Je me connecte")),
                 SizedBox(width: kHorizontalPadding),
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushNamed(context, Register.routeName);
+                  },
                   child: Text("Créer mon compte"),
                 ),
               ],

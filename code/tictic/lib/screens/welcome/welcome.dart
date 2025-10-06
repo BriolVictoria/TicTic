@@ -8,6 +8,7 @@ import 'package:tictic/screens/welcome/widgets/text_slider_with_bullets.dart';
 
 class Welcome extends StatelessWidget {
   const Welcome({super.key});
+  static const String routeName = '/';
 
   @override
   Widget build(BuildContext context) {
