@@ -6,7 +6,12 @@ import '../../../constants/sizes.dart';
 import 'bullet.dart';
 
 class Bullets extends StatelessWidget {
-  const Bullets({super.key, required this.items, required this.pageController, required this.currentIdx});
+  const Bullets({
+    super.key,
+    required this.items,
+    required this.pageController,
+    required this.currentIdx,
+  });
 
   final List<String> items;
   final PageController pageController;
@@ -32,9 +37,9 @@ class Bullets extends StatelessWidget {
                 ? 0
                 : kHorizontalPaddingL,
             width:
-            (((MediaQuery.of(context).size.width -
-                kHorizontalPaddingXL -
-                (items.length - 1) * kHorizontalPaddingL) /
+                (((MediaQuery.of(context).size.width -
+                    kHorizontalPaddingXL -
+                    (items.length - 1) * kHorizontalPaddingL) /
                 items.length)),
             color: items.indexOf(item) == currentIdx
                 ? kMainColor

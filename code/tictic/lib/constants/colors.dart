@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tictic/constants/sizes.dart';
 import 'fonts.dart';
 
 const kMainColor = Color.fromRGBO(52, 78, 65, 1);
@@ -75,12 +76,24 @@ final kAppTheme = ThemeData(
     filled: true,
     fillColor: kTertiaryColor.withValues(alpha: 0.1),
     border: OutlineInputBorder(
-      borderRadius: BorderRadius.circular(12),
-      borderSide: BorderSide(color: kTertiaryColor),
+      borderRadius: BorderRadius.circular(
+        kBorderRadiusInput,
+      ),
+      borderSide: BorderSide(
+        color: kBackgroundColor,
+        width: kBorderWidth,
+      ),
+      gapPadding: 0,
     ),
     focusedBorder: OutlineInputBorder(
-      borderRadius: BorderRadius.circular(12),
-      borderSide: BorderSide(color: kSecondaryColor, width: 2),
+      borderRadius: BorderRadius.circular(
+        kBorderRadiusInput,
+      ),
+      borderSide: BorderSide(
+        color: kMainColor,
+        width: kBorderWidth,
+      ),
+      gapPadding: 0,
     ),
   ),
 );

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:tictic/l10n/app_localizations.dart';
+import 'package:tictic/screens/login/login.dart';
 import 'package:tictic/screens/register/register.dart';
 import 'package:tictic/screens/welcome/widgets/text_divider.dart';
 
@@ -15,7 +17,8 @@ class CallToActions extends StatelessWidget {
         ElevatedButton(
           onPressed: () {},
           style: ElevatedButton.styleFrom(backgroundColor: kMainColor),
-          child: Text('Continuer sans compte'),
+          //child: Text('Continuer sans compte'),
+          child: Text(AppLocalizations.of(context)?.continueText ?? 'Continuer sans compte'),
         ),
         SizedBox(height: kVerticalPadding),
         TextDivider(text: 'Ou'),
@@ -26,13 +29,18 @@ class CallToActions extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: kHorizontalPadding),
             child: Row(
               children: [
-                ElevatedButton(onPressed: () {}, child: Text("Je me connecte")),
+                ElevatedButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, Login.routeName);
+                  },
+                  child: Text(AppLocalizations.of(context)!.connectionText),
+                ),
                 SizedBox(width: kHorizontalPadding),
                 ElevatedButton(
                   onPressed: () {
                     Navigator.pushNamed(context, Register.routeName);
                   },
-                  child: Text("Créer mon compte"),
+                  child: Text(AppLocalizations.of(context)!.createAccountText),
                 ),
               ],
             ),
