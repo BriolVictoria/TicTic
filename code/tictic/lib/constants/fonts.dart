@@ -36,6 +36,13 @@ const kTitleSideBar = TextStyle(
   fontSize: 27,
   color: kMainColor,
 );
+
+const kTextHomePage = TextStyle(
+  fontWeight: FontWeight.w600,
+  fontSize: 25,
+  color: kMainColor,
+);
+
 const kTextSideBar = TextStyle(
     fontWeight: FontWeight.w600,
     fontSize: 20,
