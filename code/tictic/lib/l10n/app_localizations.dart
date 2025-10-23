@@ -167,6 +167,12 @@ abstract class AppLocalizations {
   /// **'John@doe.be'**
   String get user_email_placeholder;
 
+  /// No description provided for @no_account.
+  ///
+  /// In en, this message translates to:
+  /// **'Don\'t have an account ?'**
+  String get no_account;
+
   /// No description provided for @user_password_label.
   ///
   /// In en, this message translates to:
@@ -190,6 +196,18 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'The field \"{field_name}\" is required.'**
   String form_field_required(String field_name);
+
+  /// No description provided for @homePageText.
+  ///
+  /// In en, this message translates to:
+  /// **'Welcome'**
+  String get homePageText;
+
+  /// No description provided for @logoutText.
+  ///
+  /// In en, this message translates to:
+  /// **'Logout'**
+  String get logoutText;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

@@ -7,10 +7,11 @@
   "constantCalculationsText": "Calculs instantanés, équité garantie avec TicTic !",
   "tediousCalculationsText": "Calculs fastidieux ? Non merci. Optez pour la simplicité avec TicTic !",
   "ticTicText": "TicTic : Vos dépenses partagées en toute simplicité !",
-  "registerText": "Se connecter",
+  "registerText": "S'inscrire",
   "username_label": "Nom d'utilisateur",
   "user_email_label": "Email",
   "username_placeholder": "JohnDoe",
+  "no_account": "Pas de compte ?",
   "user_email_placeholder": "John@doe.be",
   "already_an_account": "Déjà un compte ?",
   "user_password_label": "Mot de passe",
@@ -23,5 +24,7 @@
         "example": "Username"
       }
     }
-  }
+  },
+  "homePageText": "Bienvenue",
+  "logoutText": "Se déconnecter"
 }

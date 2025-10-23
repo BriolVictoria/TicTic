@@ -33,7 +33,7 @@ class AppLocalizationsFr extends AppLocalizations {
   String get ticTicText => 'TicTic : Vos dépenses partagées en toute simplicité !';
 
   @override
-  String get registerText => 'Se connecter';
+  String get registerText => 'S\'inscrire';
 
   @override
   String get username_label => 'Nom d\'utilisateur';
@@ -43,6 +43,9 @@ class AppLocalizationsFr extends AppLocalizations {
 
   @override
   String get user_email_placeholder => 'John@doe.be';
+
+  @override
+  String get no_account => 'Pas de compte ?';
 
   @override
   String get user_password_label => 'Mot de passe';
@@ -57,4 +60,10 @@ class AppLocalizationsFr extends AppLocalizations {
   String form_field_required(String field_name) {
     return 'Le champs \"$field_name\" est requis.';
   }
+
+  @override
+  String get homePageText => 'Bienvenue';
+
+  @override
+  String get logoutText => 'Se déconnecter';
 }

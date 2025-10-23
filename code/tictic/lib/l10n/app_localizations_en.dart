@@ -45,6 +45,9 @@ class AppLocalizationsEn extends AppLocalizations {
   String get user_email_placeholder => 'John@doe.be';
 
   @override
+  String get no_account => 'Don\'t have an account ?';
+
+  @override
   String get user_password_label => 'Password';
 
   @override
@@ -57,4 +60,10 @@ class AppLocalizationsEn extends AppLocalizations {
   String form_field_required(String field_name) {
     return 'The field \"$field_name\" is required.';
   }
+
+  @override
+  String get homePageText => 'Welcome';
+
+  @override
+  String get logoutText => 'Logout';
 }
