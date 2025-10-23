@@ -13,6 +13,8 @@ class MyTextInput extends StatelessWidget {
     this.hintText,
     this.keyboardType,
     this.obscureText = false,
+    this.suffixIcon,
+    this.controller,
   });
 
   final Widget? prefixIcon;
@@ -21,14 +23,19 @@ class MyTextInput extends StatelessWidget {
   final String? hintText;
   final TextInputType? keyboardType;
   final bool obscureText;
+  final Widget? suffixIcon;
+
+  final TextEditingController? controller;
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      controller: controller,
       keyboardType: keyboardType,
       validator: validator,
       obscureText: obscureText,
       decoration: InputDecoration(
+        suffixIcon: suffixIcon,
         prefixIcon: prefixIcon,
         label: Container(
           padding: EdgeInsets.symmetric(
